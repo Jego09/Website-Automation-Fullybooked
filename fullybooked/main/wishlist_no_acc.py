@@ -94,6 +94,5 @@ class wishlist():
 
 if __name__ == "__main__":    
     wishlist_instance = wishlist()
-    wishlist_instance.wishlist_no_acc()
     wishlist_instance.wishlist_with_acc()
 
