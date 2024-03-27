@@ -12,27 +12,6 @@ class store_locator():
         self.driver = driver
     
     def locator(self):
-
-        login_register_button = self.driver.find_element(By.ID, "myAccount")
-        login_register_button.click()
-        print("Clicked Login/Register Button")
-        time.sleep(2)
-
-        username = self.driver.find_element(By.ID, "email")
-        username.send_keys("btad@fullybookedonline.com")
-        print("Entered Username")
-        time.sleep(1)
-
-        password = self.driver.find_element(By.ID, "password")
-        password.send_keys("@HOsOCRmzkt4ngZ0YIaKj")
-        print("Entered Password")
-        time.sleep(1)
-
-        login_button = self.driver.find_element(By.XPATH, "//*[@id='root']/div/section/header/nav/div[2]/div/div/div/form/div[4]/button")
-        login_button.click()
-        print("Clicked Login Button")
-        time.sleep(3)
-
         locator_click = self.driver.find_element(By.XPATH, "//*[@id='root']/div/footer/div[3]/div/div/div/div/div/div[2]/details[1]/ul/li[7]/a")
         print("Clicked Store Locator Button")        
         locator_click.click()
