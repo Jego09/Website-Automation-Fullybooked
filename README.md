@@ -1,1 +1,1 @@
-Welcome, this is my portfolio.
+Welcome to my portfolio! Here, you'll find a curated collection of my professional journey, a showcase of the projects I've undertaken, the skills I've honed, and the experiences that have shaped me. Consider it a window into my history of work, growth, and achievements.
