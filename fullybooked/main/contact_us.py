@@ -11,27 +11,6 @@ class contact_us():
         self.driver = driver
         
     def click_contact_us(self):
-
-        login_register_button = self.driver.find_element(By.ID, "myAccount")
-        login_register_button.click()
-        print("Clicked Login/Register Button")
-        time.sleep(2)
-
-        username = self.driver.find_element(By.ID, "email")
-        username.send_keys("btad@fullybookedonline.com")
-        print("Entered Username")
-        time.sleep(1)
-
-        password = self.driver.find_element(By.ID, "password")
-        password.send_keys("@HOsOCRmzkt4ngZ0YIaKj")
-        print("Entered Password")
-        time.sleep(1)
-
-        login_button = self.driver.find_element(By.XPATH, "//*[@id='root']/div/section/header/nav/div[2]/div/div/div/form/div[4]/button")
-        print("Clicked Login Button")
-        login_button.click()
-        time.sleep(2)
-
         click_contact = self.driver.find_element(By.XPATH, "//*[@id='root']/div/footer/div[3]/div/div/div/div/div/div[2]/details[2]/ul/li[1]/a")
         click_contact.click()
         time.sleep(7)
