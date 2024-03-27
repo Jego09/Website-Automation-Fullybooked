@@ -16,13 +16,6 @@ class search():
     def search_bar(self):
         # for _ in range(5): #repeats the process on a specific value
         try:
-            # self.driver = webdriver.Chrome()
-            # self.driver = webdriver.Chrome('D:\Python Projects\Projects\fullybooked\chromedriver.exe')
-            # self.driver.maximize_window()
-            # self.driver.get("https://www.fullybookedonline.com")
-            # print("Open Chrome")
-            # WebDriverWait(self.driver, 10).until(
-            #     EC.presence_of_element_located((By.ID, "html-body")))
 
             # Generate a random book title
             random_title = generate_random_title()
@@ -35,9 +28,6 @@ class search():
             # Submit the search by pressing ENTER
             search_field.send_keys(Keys.ENTER)
             print("Entered a Title")
-            # WebDriverWait(self.driver, 10).until(
-            #     EC.presence_of_element_located((By.XPATH, "//*[@id='root']/div/div[2]/main/section/div/div[2]/div/ul/div[1]/a/div[2]/p")))
-            # time.sleep(3)
             
             # Wait for the first item to load
             WebDriverWait(self.driver, 10).until(
@@ -72,7 +62,6 @@ class search():
             checkout_button = self.driver.find_element(By.XPATH, "//*[@id='root']/div/div[2]/main/section/div/div[2]/article/article/div[2]/div/ul/div[2]/div/button")
             checkout_button.click()
             time.sleep(3)
-            
 
         except NoSuchElementException:
             # If the add to cart does not exist, click on the Notify me
