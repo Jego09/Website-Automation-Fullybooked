@@ -14,12 +14,29 @@ class FullyBookTest(unittest.TestCase):
         
     def setUp(self):
         self.driver = webdriver.Chrome()
-       # self.driver = webdriver.Chrome('D:\Python Projects\Projects\fullybooked\chromedriver.exe')
         self.driver.maximize_window()
         self.driver.get("https://www.fullybookedonline.com")
         print("Open Chrome")
         WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.ID, "html-body")))
+        time.sleep(2)
+    
+        login_register_button = self.driver.find_element(By.ID, "myAccount")
+        login_register_button.click()
+        print("Clicked Login/Register Button")
+        time.sleep(5)
+
+        username = self.driver.find_element(By.ID, "email")
+        username.send_keys("btad@fullybookedonline.com")
+        print("Entered Username")
+
+        password = self.driver.find_element(By.ID, "password")
+        password.send_keys("@HOsOCRmzkt4ngZ0YIaKj")
+        print("Entered Password")
+
+        login_button = self.driver.find_element(By.XPATH, "//*[@id='root']/div/section/header/nav/div[2]/div/div/div/form/div[4]/button")
+        print("Clicked Login Button")
+        login_button.click()
         time.sleep(2)
 
     def tearDown(self):
@@ -38,17 +55,17 @@ class FullyBookTest(unittest.TestCase):
         print("Finished Open Pages Testing")
         
 
-    # #logged in, search, open product, add to cart, checkout, (COD or Other Methods)
-    def test_c_login(self):
-        customer_login = login_customer(self.driver)
-        customer_login.login()
-        print("Finished Log In Testing")
+    # # #logged in, search, open product, add to cart, checkout, (COD or Other Methods)
+    # def test_c_login(self):
+    #     customer_login = login_customer(self.driver)
+    #     customer_login.login()
+    #     print("Finished Log In Testing")
  
 
     # #wishlist no account
     def test_d_wishlist(self):
         wishlist_instance = wishlist(self.driver)
-        wishlist_instance.wishlist_no_acc()
+        # wishlist_instance.wishlist_no_acc()
         wishlist_instance.wishlist_with_acc()
         print("Finished Wishlist Testing")
 
@@ -76,3 +93,4 @@ class FullyBookTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
