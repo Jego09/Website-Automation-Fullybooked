@@ -81,9 +81,7 @@ class checkout():
 
         except NoSuchElementException:
             # If the add to cart does not exist, click on the Notify me
-            notify_me = self.driver.find_element(By.XPATH,
-                '//*[@id="root"]/div/div[2]/main/section[1]/div/article/div[5]/section/div/div/button'
-            )
+            notify_me = self.driver.find_element(By.XPATH,"//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/section/div/div/button")
             notify_me.click()
             print("Clicked the Notify Me Button.")
             time.sleep(3)
