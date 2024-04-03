@@ -42,23 +42,20 @@ class FullyBookTest(unittest.TestCase):
     def tearDown(self):
         self.driver.close()
 
-    # not logged in, search, open product, add to cart, checkout (COD or Other Methods) 
-    # def test_a_search_open_product(self):
-    #     search_instance = search(self.driver)
-    #     search_instance.search_bar()   
-    #     print("Finished Search, Open Product, Add to Cart, Checkout Testing")
+    def test_a_search_open_product(self):
+        search_instance = search(self.driver)
+        search_instance.search_bar()   
+        print("Finished Search, Open Product, Add to Cart, Checkout Testing")
 
-    # # click blogs, open an article
-    # def test_b_open_pages(self):
-    #     open_blog = open_pages(self.driver)
-    #     open_blog.blogs()
-    #     print("Finished Open Pages Testing")
+    def test_b_open_pages(self):
+        open_blog = open_pages(self.driver)
+        open_blog.blogs()
+        print("Finished Open Pages Testing")
 
-    # # #wishlist no account
-    # def test_c_wishlist(self):
-    #     wishlist_instance = wishlist(self.driver)
-    #     wishlist_instance.wishlist_with_acc()
-    #     print("Finished Wishlist Testing")
+    def test_c_wishlist(self):
+        wishlist_instance = wishlist(self.driver)
+        wishlist_instance.wishlist_with_acc()
+        print("Finished Wishlist Testing")
 
 
     def test_d_checkout_complete(self):    
@@ -67,20 +64,20 @@ class FullyBookTest(unittest.TestCase):
         print("Finished Checkout Testing")
         
 
-    # def test_e_contact_us(self):
-    #     contact_click = contact_us(self.driver)
-    #     contact_click.click_contact_us()
-    #     print("Finished Contact Us Testing")
+    def test_e_contact_us(self):
+        contact_click = contact_us(self.driver)
+        contact_click.click_contact_us()
+        print("Finished Contact Us Testing")
         
     
-    # def test_f_store_locator(self):
-    #     chat_live = store_locator(self.driver)
-    #     chat_live.locator()
+    def test_f_store_locator(self):
+        chat_live = store_locator(self.driver)
+        chat_live.locator()
 
     
-    # def test_g_admin_login(self):
-    #     admin_login = admin()
-    #     admin_login.admin_login()
+    def test_g_admin_login(self):
+        admin_login = admin()
+        admin_login.admin_login()
 
 if __name__ == "__main__":
     unittest.main()
