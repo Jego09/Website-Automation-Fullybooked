@@ -30,10 +30,10 @@ class checkout():
                 EC.presence_of_element_located((By.XPATH, "//*[@id='root']/div/div[2]/main/section/div/div[2]/div/ul/div[1]/a/div[2]/p" )))
             p_elements.click()
             print("Clicked a Title")
-            time.sleep(4)
 
             # Check if the add to cart button exists using XPath
-            add_cart = self.driver.find_element(By.XPATH, "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/button")
+            add_cart = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/button")))
             # If the add to cart button exists, click on it
             add_cart.click()
             print("Clicked the Add To Cart Button.")
@@ -90,5 +90,3 @@ class checkout():
 if __name__ == "__main__":
     checkout_instance = checkout()
     checkout_instance.checkout_complete()
-
-#testing git push
