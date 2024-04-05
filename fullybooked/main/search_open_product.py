@@ -25,30 +25,30 @@ class search():
                     EC.presence_of_element_located((By.ID, "search-field")))
                 search_field.send_keys(random_title)
                 print("Insert a title")
+
                 # Submit the search by pressing ENTER
                 search_field.send_keys(Keys.ENTER)
                 print("Entered a Title")
-                
-                # Wait for the first item to load
+
+                # Wait for the browser to load
                 WebDriverWait(self.driver, 10).until(
-                    EC.presence_of_element_located((By.XPATH, "//*[@id='root']/div/div[2]/main/section/div/div[2]/div/ul/div[1]/a/div[2]/p")))
-                time.sleep(2)
-                
+                    EC.presence_of_element_located((By.XPATH, "//*[@id='root']/div/div[2]/main/section/div/div[2]/div/ul/div[1]/a/div[2]/p"))
+                )
                 #clicks a random title within the search perimeter
                 p_elements = WebDriverWait(self.driver, 10).until(
                     (EC.presence_of_all_elements_located((By.CLASS_NAME, "ProductCard-Name"))))
                 elements_p = random.choice(p_elements)
                 elements_p.click()
                 print("Clicked a Random Title")
-                time.sleep(10)
-
-        except NoSuchElementException:
-                # If the add to cart does not exist, click on the Notify me
-                notify_me = self.driver.find_element(By.XPATH, "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/section/div/div/button")
-                notify_me.click()
-                print("Clicked the Notify Me Button.")
+                
+                #waits for Notify Me or Add to cart to be located
+                WebDriverWait(self.driver, 10).until (
+                     EC.presence_of_element_located((By. XPATH, "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/section/div/div/button | //*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/button"))
+                )
                 time.sleep(3)
-                    
+        #if no item was located
+        except NoSuchElementException:
+                print("No Items was found")
 
 if __name__ == "__main__":
     search_instance = search()
