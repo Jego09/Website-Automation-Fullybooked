@@ -8,29 +8,33 @@ from contact_us import *
 from store_locator import *
 from admin import *
 from LoginCustomer import *
+from selenium.webdriver.chrome.options import Options
 
 
 class FullyBookTest(unittest.TestCase):
         
     def setUp(self):
+        
+        # options = Options()
+        # options.add_argument('--headless')
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
         self.driver.get("https://www.fullybookedonline.com")
         print("Open Chrome")
-        WebDriverWait(self.driver, 10).until(
-            EC.presence_of_element_located((By.ID, "html-body")))
-        time.sleep(2)
-    
+        
+        self.driver.implicitly_wait(10)
+
         login_register_button = self.driver.find_element(By.ID, "myAccount")
         login_register_button.click()
         print("Clicked Login/Register Button")
-        time.sleep(5)
 
-        username = self.driver.find_element(By.ID, "email")
+        username = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.ID, "email")))
         username.send_keys("btad@fullybookedonline.com")
         print("Entered Username")
 
-        password = self.driver.find_element(By.ID, "password")
+        password = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.ID, "password")))
         password.send_keys("@HOsOCRmzkt4ngZ0YIaKj")
         print("Entered Password")
 
@@ -40,12 +44,13 @@ class FullyBookTest(unittest.TestCase):
         time.sleep(2)
 
     def tearDown(self):
-        self.driver.close()
+        if self.driver:
+            self.driver.quit()
 
     def test_a_search_open_product(self):
         search_instance = search(self.driver)
         search_instance.search_bar()   
-        print("Finished Search, Open Product, Add to Cart, Checkout Testing")
+        print("Finished Search, Open Product")
 
     def test_b_open_pages(self):
         open_blog = open_pages(self.driver)
