@@ -10,6 +10,7 @@ class CategoryPageLocators:
 
     FIRST_ITEM = "//*[@id='root']/div/div[2]/main/section/div/div[2]/div/ul/div[1]/a/div[2]/p"
     SECOND_ITEM = "//*[@id='root']/div/div[2]/main/section/div/div[2]/div/ul/div[2]/a/div[2]/p"
+    PRODUCT_ITEM = "ProductCard-Name"
 
 class ItemDescriptionLocators:
 
