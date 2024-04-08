@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 from selenium.common.exceptions import NoSuchElementException
+from elements import *
 
 class checkout():
 
@@ -15,84 +16,92 @@ class checkout():
         try:
             
             search_field = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.ID, "search-field")))
-            search_field.send_keys("Atomic Habits")
+                EC.presence_of_element_located((By.ID, HeaderLocators.SEARCH_INPUT))
+            )
+            search_field.send_keys("9781250326751-2")
             print("Insert a title")
             # Submit the search by pressing ENTER
             search_field.send_keys(Keys.ENTER)
 
             WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, "//*[@id='root']/div/div[2]/main/section/div/div[2]/div/ul/div[1]/a/div[2]/p")))
-            time.sleep(2)
+                EC.presence_of_element_located((By.XPATH, CategoryPageLocators.FIRST_ITEM))
+            )
 
-            #clicks a random title within the search perimeter
+            #clicks the first title within the search perimeter
             p_elements = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, "//*[@id='root']/div/div[2]/main/section/div/div[2]/div/ul/div[2]/a/div[2]/p" )))
+                EC.presence_of_element_located((By.XPATH, CategoryPageLocators.FIRST_ITEM))
+            )
             p_elements.click()
             print("Clicked a Title")
 
             # Check if the add to cart button exists using XPath
             add_cart = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/button")))
+                EC.presence_of_element_located((By.XPATH, ItemDescriptionLocators.ADD_TO_CART)))
             # If the add to cart button exists, click on it
             add_cart.click()
             print("Clicked the Add To Cart Button.")
-            time.sleep(3)
 
+            #Wait for Product added Notification
             WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, "//*[@id='root']/div/div[1]/div/p"))
+                EC.presence_of_element_located((By.XPATH, NotificationLocators.NOTIF_ADDED))
             )
+
             #Opens Cart
-            cart_button = self.driver.find_element(By.XPATH,"//*[@id='root']/div/section[1]/header/nav/div[4]/button")
+            cart_button = self.driver.find_element(By.XPATH, HeaderLocators.CART_BUTTON)
             cart_button.click()
             print("Opens Cart")
-            time.sleep(3)
 
             try:
             #Clicks View Cart
-                view_cart = self.driver.find_element(By.XPATH, "//*[@id='root']/div/section[1]/header/nav/div[4]/div/div/div[2]/div/a")
+                view_cart = self.driver.find_element(By.XPATH, CartHeaderLocators.VIEW_CART)
                 view_cart.click()
                 print("Clicks View Cart")
-                time.sleep(3)
             except:
                 print("Quantity/Cart not Available")
                 self.driver.quit()          
 
             #Clicks Checkout
-            checkout_button = self.driver.find_element(By.XPATH, "//*[@id='root']/div/div[2]/main/section/div/div[2]/article/article/div[2]/div/ul/div[2]/div/button")
+            checkout_button = WebDriverWait(self.driver, 10).until(
+                EC.element_to_be_clickable((By. XPATH, ShoppingCartLocators.CHECKOUT_CART))
+            )
             checkout_button.click()
             print("Clicks Checkout Button")
-            time.sleep(3)
 
-            text_area = self.driver.find_element(By.XPATH, "//*[@id='SHIPPING_STEP']/div[2]/div/div/div/div/div/textarea")
+            text_area = WebDriverWait(self.driver, 10).until(
+                EC.element_to_be_clickable((By.XPATH, ShippingDetailsLocators.NOTES_INPUT))
+            )
             text_area.send_keys("Disregard This Order, For testing purposes Only")
             print("Input Disregard Order Text")
-            time.sleep(2)
-
             
             ptb_button = WebDriverWait(self.driver, 10).until(
-                EC.element_to_be_clickable((By.XPATH, "//*[@id='SHIPPING_STEP']/div[4]/button")))
+                EC.element_to_be_clickable((By.XPATH, ShippingDetailsLocators.PAY_TO_BILLING))
+            )
             ptb_button.click()
+            print("Clicked Proceed to Billing")
 
-            cod_button = self.driver.find_element(By.XPATH, "//*[@id='option-Cash On Delivery']")
+            cod_button = WebDriverWait(self.driver, 10).until(
+                EC.element_to_be_clickable((By.XPATH, PaymentDetailsLocators.COD_BUTTON))
+            )
             cod_button.click()
-            
-            tac_button = self.driver.find_element(By.XPATH, "//*[@id='termsAndConditions']")
+            print("Clicked Cash on Delivery Button")
+            tac_button = WebDriverWait(self.driver, 10).until(
+                EC.element_to_be_clickable((By.XPATH, PaymentDetailsLocators.TAC_BUTTON))
+            )
             tac_button.click()
+            print("Clicked Terms and Condition Button")
             time.sleep(5)
 
-            #checkout button
+            # checkout button / commented out because it needed to be tested manually.
             # po_button = WebDriverWait(self.driver, 10).until(
-            #     EC.presence_of_element_located((By.XPATH, "//*[@id='BILLING_STEP']/div[4]/button")))
+            #     EC.presence_of_element_located((By.XPATH, PaymentDetailsLocators.PO_BUTTON)))
             # po_button.click()
 
         except NoSuchElementException:
             # If the add to cart does not exist, click on the Notify me
             notify_me = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH,"//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/section/div/div/button")))
+                EC.presence_of_element_located((By.XPATH, ItemDescriptionLocators.NOTIFY_BUTTON)))
             notify_me.click()
             print("Clicked the Notify Me Button")
-            time.sleep(3)
         except:
             print("Nothing can be clicked")
             self.driver.quit()
