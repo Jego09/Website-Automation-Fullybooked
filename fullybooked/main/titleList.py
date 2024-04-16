@@ -7,8 +7,3 @@ book_titles = [
 def generate_random_title():
     """Generate a random book title."""
     return random.choice(book_titles)
-
-def store_title(filename, title):
-    """Store the title in a file."""
-    with open(filename, 'a') as file:
-        file.write(title + '\n')

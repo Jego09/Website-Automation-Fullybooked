@@ -2,7 +2,7 @@
 
 class Login:
     
-    #Locator: ID
+    #Login Locators
     LOGIN_LOGO = "myAccount"
     USERNAME_TXTBOX = "email"
     PASSWORD_TXTBOX = "password"
@@ -18,16 +18,18 @@ class HeaderLocators:
 
 class CategoryPageLocators:
 
+    #XPATH Of First & Second Item
     FIRST_ITEM = "//*[@id='root']/div/div[2]/main/section/div/div[2]/div/ul/div[1]/a/div[2]/p"
     SECOND_ITEM = "//*[@id='root']/div/div[2]/main/section/div/div[2]/div/ul/div[2]/a/div[2]/p"
+    #Class ID of Items
     PRODUCT_ITEM = "ProductCard-Name"
 
 class ItemDescriptionLocators:
 
     ADD_TO_CART = "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/button"
     NOTIFY_BUTTON = "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/section/div/div/button"
+    WISHLIST_BUTTON = "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[6]/div[1]/button/div"
     
-
 class CartHeaderLocators:
 
     VIEW_CART = "//*[@id='root']/div/section[1]/header/nav/div[4]/div/div/div[2]/div/a"
@@ -40,10 +42,11 @@ class ShoppingCartLocators:
 class NotificationLocators:
 
     #Product was Added to Cart Notification
-    NOTIF_ADDED = "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/button"
+    NOTIF_CART = "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/button"
+    NOTIF_WISHLIST = "//*[@id='root']/div/div[1]/div/p"
     ERROR_FETCHING = "//*[@id='root']/div/div[1]/div" 
     ERROR_MESSAGE = "is Triggered"
-
+    NOTIF_GENERAL = "//*[@id='root']/div/div[1]"
 
 class ShippingDetailsLocators:
 

@@ -9,6 +9,7 @@ from store_locator import *
 from admin import *
 from LoginCustomer import *
 from selenium.webdriver.chrome.options import Options
+from elements import Login
 
 
 class FullyBookTest(unittest.TestCase):
@@ -24,21 +25,21 @@ class FullyBookTest(unittest.TestCase):
         
         self.driver.implicitly_wait(10)
 
-        login_register_button = self.driver.find_element(By.ID, "myAccount")
+        login_register_button = self.driver.find_element(By.ID, Login.LOGIN_LOGO) 
         login_register_button.click()
         print("Clicked Login/Register Button")
 
         username = WebDriverWait(self.driver, 10).until(
-            EC.presence_of_element_located((By.ID, "email")))
-        username.send_keys("btad@fullybookedonline.com")
+            EC.presence_of_element_located((By.ID, Login.USERNAME_TXTBOX)))
+        username.send_keys(Login.USERNAME_INPUT)
         print("Entered Username")
 
         password = WebDriverWait(self.driver, 10).until(
-            EC.presence_of_element_located((By.ID, "password")))
-        password.send_keys("@HOsOCRmzkt4ngZ0YIaKj")
+            EC.presence_of_element_located((By.ID, Login.PASSWORD_TXTBOX)))
+        password.send_keys(Login.PASSWORD_INPUT)
         print("Entered Password")
 
-        login_button = self.driver.find_element(By.XPATH, "//*[@id='root']/div/section/header/nav/div[2]/div/div/div/form/div[4]/button")
+        login_button = self.driver.find_element(By.XPATH, Login.LOGIN_BUTTON)
         print("Clicked Login Button")
         login_button.click()
         time.sleep(2)
@@ -79,10 +80,23 @@ class FullyBookTest(unittest.TestCase):
         chat_live = store_locator(self.driver)
         chat_live.locator()
 
-    
+class AdminTest(unittest.TestCase):    
+
     def test_g_admin_login(self):
-        admin_login = admin()
-        admin_login.admin_login()
+        admin_instance = admin()
+        admin_instance.admin_login()
+
+# class CategoryHeadersTest(unittest.Testcase):
+
+    # def test_h_bestsellers(self):
+    
+    # def test_i_collections(self):
+    
+    # def test_j_new(self):
+    
+    # def test_k_preorders(self):
+    
+    # def test_l_sale(self):
 
 if __name__ == "__main__":
     unittest.main()

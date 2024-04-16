@@ -1,4 +1,3 @@
-from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -43,7 +42,7 @@ class checkout():
 
             #Wait for Product added Notification
             WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, NotificationLocators.NOTIF_ADDED))
+                EC.presence_of_element_located((By.XPATH, NotificationLocators.NOTIF_CART))
             )
 
             #Opens Cart
@@ -90,7 +89,7 @@ class checkout():
             tac_button.click()
             print("Clicked Terms and Condition Button")
             time.sleep(5)
-
+            
             # checkout button / commented out because it needed to be tested manually.
             # po_button = WebDriverWait(self.driver, 10).until(
             #     EC.presence_of_element_located((By.XPATH, PaymentDetailsLocators.PO_BUTTON)))

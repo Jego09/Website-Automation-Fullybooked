@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 from selenium.common.exceptions import NoSuchElementException
 from get_book_titles import get_titles_from_file
-from titleList import generate_random_title, store_title
+from titleList import generate_random_title
 import random
 
 class login_customer():

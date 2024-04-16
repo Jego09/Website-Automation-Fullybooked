@@ -1,13 +1,11 @@
-from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-import time
-from titleList import generate_random_title, store_title
-from get_book_titles import get_titles_from_file
-from selenium.common.exceptions import NoSuchElementException
-from elements import * 
+from titleList import generate_random_title
+from selenium.common.exceptions import *
+from elements import *
 import random
 
 class search():
@@ -22,19 +20,29 @@ class search():
                 random_title = generate_random_title()
                 
                 # Locate the search field and send the random title via titleList.py
-                search_field = WebDriverWait(self.driver, 10).until(
+                search_field = WebDriverWait(self.driver, 20).until(
                     EC.presence_of_element_located((By.ID, HeaderLocators.SEARCH_INPUT)))
                 search_field.send_keys(random_title)
-                print("Insert a title")
+                # search_field.send_keys("The Count of Monte Cristo")
+                print("Inserted a title:", random_title)
 
                 # Enter Key
                 search_field.send_keys(Keys.ENTER)
-                print("Entered a Title")
+                print("Title Entered")
 
                 # Wait for the first item to load / If no item was detected, EXCEPT condition will be triggered
-                WebDriverWait(self.driver, 10).until(
+                WebDriverWait(self.driver, 15).until(
                     EC.presence_of_element_located((By.XPATH, CategoryPageLocators.FIRST_ITEM))
                 )
+                # try:
+                #     WebDriverWait(self.driver, 10).until(
+                #         EC.visibility_of_element_located((By.XPATH, NotificationLocators.ERROR_FETCHING))
+                #     )
+                #     print("Error fetching:", NotificationLocators.ERROR_MESSAGE)
+                # except TimeoutError:
+                #     print("Category page loaded, but first item not found")
+                #     self.driver.quit()
+                
                 #clicks a random title within the grid
                 random_item = WebDriverWait(self.driver, 10).until(
                     EC.presence_of_all_elements_located((By.CLASS_NAME, CategoryPageLocators.PRODUCT_ITEM)))
@@ -43,14 +51,16 @@ class search():
                 print("Clicked a Random Title")
                 
                 #waits for Notify Me or Add to cart to be located / Notify me and Add to cart are separated by | 
-                WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, ItemDescriptionLocators.ADD_TO_CART)) or
-                EC.presence_of_element_located((By.XPATH, ItemDescriptionLocators.NOTIFY_BUTTON))
-                )
-                time.sleep(3)
+                # WebDriverWait(self.driver, 15).until(
+                #     EC.presence_of_element_located((By.XPATH, ItemDescriptionLocators.ADD_TO_CART)) 
+                #     or
+                #     EC.presence_of_element_located((By.XPATH, ItemDescriptionLocators.NOTIFY_BUTTON))
+                # )
+                # print("Product is available")
+            
         #if no item was located
-        except NoSuchElementException:
-                print("No Items was found")
+        except TimeoutException:
+            print("No Items was found or Error Fetching was Triggered")
 
 if __name__ == "__main__":
     search_instance = search()
