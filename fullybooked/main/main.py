@@ -60,32 +60,32 @@ class FullyBookTest(unittest.TestCase):
         if self.driver:
             self.driver.quit()
 
-    # def test_a_search_open_product(self):
-    #     search_instance = search(self.driver)
-    #     search_instance.search_bar()   
-    #     print("Finished Search, Open Product")
+    def test_a_search_open_product(self):
+        search_instance = search(self.driver)
+        search_instance.search_bar()   
+        print("Finished Search, Open Product")
 
-    # def test_b_open_pages(self):
-    #     open_blog = open_pages(self.driver)
-    #     open_blog.blogs()
-    #     print("Finished Open Pages Testing")
+    def test_b_open_pages(self):
+        open_blog = open_pages(self.driver)
+        open_blog.blogs()
+        print("Finished Open Pages Testing")
 
-    # def test_c_wishlist(self):
-    #     wishlist_instance = wishlist(self.driver)
-    #     wishlist_instance.wishlist_with_acc()
-    #     print("Finished Wishlist Testing")
+    def test_c_wishlist(self):
+        wishlist_instance = wishlist(self.driver)
+        wishlist_instance.wishlist_with_acc()
+        print("Finished Wishlist Testing")
 
 
-    # def test_d_checkout_complete(self):    
-    #     checkout_instance = checkout(self.driver)
-    #     checkout_instance.checkout_complete()
-    #     print("Finished Checkout Testing")
+    def test_d_checkout_complete(self):    
+        checkout_instance = checkout(self.driver)
+        checkout_instance.checkout_complete()
+        print("Finished Checkout Testing")
         
 
-    # def test_e_contact_us(self):
-    #     contact_click = contact_us(self.driver)
-    #     contact_click.click_contact_us()
-    #     print("Finished Contact Us Testing")
+    def test_e_contact_us(self):
+        contact_click = contact_us(self.driver)
+        contact_click.click_contact_us()
+        print("Finished Contact Us Testing")
         
     
     def test_f_store_locator(self):
