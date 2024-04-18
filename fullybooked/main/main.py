@@ -73,19 +73,16 @@ class FullyBookTest(unittest.TestCase):
         wishlist_instance.wishlist_with_acc()
         print("Finished Wishlist Testing")
 
-
     def test_d_checkout_complete(self):    
         checkout_instance = checkout(self.driver)
         checkout_instance.checkout_complete()
         print("Finished Checkout Testing")
-        
-
+    
     def test_e_contact_us(self):
         contact_click = contact_us(self.driver)
         contact_click.click_contact_us()
         print("Finished Contact Us Testing")
         
-    
     def test_f_store_locator(self):
         chat_live = store_locator(self.driver)
         chat_live.locator()
