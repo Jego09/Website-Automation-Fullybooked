@@ -1,0 +1,10 @@
+#The purpose of environment variables is to protect sensitive credentials. You need to create your own environment variables or .env file if you pulled into my repo, this is the format of credentials.
+
+#remember to change the directory in load_dotenv('sample\directory) per file.
+
+#Login Credentials in FB Website
+USERNAME_INPUT = "your username here"
+PASSWORD_INPUT = "your password here"
+#Login Credentials in FB Admin Website
+USERNAME_ADMIN = "your username here"
+PASSWORD_ADMIN = "your password here"

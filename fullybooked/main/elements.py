@@ -2,12 +2,10 @@
 
 class Login:
     
-    #Login Locators
+    #Login Locators in Fullybooked Website
     LOGIN_LOGO = "myAccount"
     USERNAME_TXTBOX = "email"
     PASSWORD_TXTBOX = "password"
-    USERNAME_INPUT = "btad@fullybookedonline.com"
-    PASSWORD_INPUT = "@HOsOCRmzkt4ngZ0YIaKj"
     LOGIN_BUTTON = "//*[@id='root']/div/section/header/nav/div[2]/div/div/div/form/div[4]/button"
 
 class HeaderLocators:
@@ -62,6 +60,4 @@ class PaymentDetailsLocators:
 class AdminLocators:
     USERNAME = "username"
     PASSWORD = "login"
-    USERNAME_INPUT = "carllimpiado"
-    PASSWORD_INPUT = "3DFE632B5D"
     SIGN_IN_BUTTON = "//*[@id='login-form']/fieldset/div[3]/div[1]/button/span"

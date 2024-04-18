@@ -6,6 +6,13 @@ from selenium.webdriver.common.keys import Keys
 import time
 from elements import AdminLocators
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from dotenv import load_dotenv
+import os
+
+load_dotenv('fullybooked\main\.env')
+
+AD_USERNAME: str = os.getenv('USERNAME_ADMIN')
+AD_PASSWORD: str = os.getenv('PASSWORD_ADMIN')
 
 class admin():
 
@@ -16,11 +23,11 @@ class admin():
             self.driver.get("https://www.Fullybookedonline.com/fbqdm1n")     
 
             username = self.driver.find_element(By.ID, AdminLocators.USERNAME)
-            username.send_keys(AdminLocators.USERNAME_INPUT)
+            username.send_keys(AD_USERNAME)
             print("Entered Username")
             
             password = self.driver.find_element(By.ID, AdminLocators.PASSWORD)
-            password.send_keys(AdminLocators.PASSWORD_INPUT)
+            password.send_keys(AD_PASSWORD)
             print("Entered Password")
 
             sign_in = self.driver.find_element(By.XPATH, AdminLocators.SIGN_IN_BUTTON)
