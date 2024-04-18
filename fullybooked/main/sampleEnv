@@ -8,3 +8,5 @@ PASSWORD_INPUT = "your password here"
 #Login Credentials in FB Admin Website
 USERNAME_ADMIN = "your username here"
 PASSWORD_ADMIN = "your password here"
+
+#save it as .env
