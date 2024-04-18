@@ -11,6 +11,11 @@ from LoginCustomer import *
 from selenium.webdriver.chrome.options import Options
 from elements import Login
 
+class AdminTest(unittest.TestCase):    
+
+    def test_a_admin_login(self):
+        admin_instance = admin()
+        admin_instance.admin_login()
 
 class FullyBookTest(unittest.TestCase):
         
@@ -82,7 +87,7 @@ class FullyBookTest(unittest.TestCase):
 
 class AdminTest(unittest.TestCase):    
 
-    def test_g_admin_login(self):
+    def test_a_admin_login(self):
         admin_instance = admin()
         admin_instance.admin_login()
 
@@ -97,6 +102,8 @@ class AdminTest(unittest.TestCase):
     # def test_k_preorders(self):
     
     # def test_l_sale(self):
+
+    #test
 
 if __name__ == "__main__":
     unittest.main()
