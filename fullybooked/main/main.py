@@ -1,15 +1,4 @@
-import unittest
-from search_open_product import *
-from open_pages import *
-from wishlist_no_acc import *
-from checkout_complete import *
-from contact_us import *
-from store_locator import *
-from admin import *
-from selenium.webdriver.chrome.options import Options
-from elements import Login
-from dotenv import load_dotenv
-import os
+from utils import *
 
 load_dotenv('fullybooked\main\.env')
 
@@ -86,20 +75,8 @@ class FullyBookTest(unittest.TestCase):
     def test_f_store_locator(self):
         chat_live = store_locator(self.driver)
         chat_live.locator()
-
-# class CategoryHeadersTest(unittest.Testcase):
-
-    # def test_h_bestsellers(self):
     
-    # def test_i_collections(self):
-    
-    # def test_j_new(self):
-    
-    # def test_k_preorders(self):
-    
-    # def test_l_sale(self):
-
-    #test
+    # def test_g_cancel_order(self):
 
 if __name__ == "__main__":
     unittest.main()

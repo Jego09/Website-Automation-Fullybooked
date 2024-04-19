@@ -20,6 +20,19 @@ class CategoryPageLocators:
     #Class ID of Items
     PRODUCT_ITEM = "ProductCard-Name"
 
+#***XPATH OF ARIA-LABEL AS PAGE NUMBER
+    PAGE_ARIA = "f'//a[@aria-label="
+#***XPATH OF PAGE_BUTTON
+    PAGE_BUTTON = "//a[@aria-label='Page 1']"
+#***Declaring the page number
+    PAGE_NUM = 1
+#***CONCATENATING STRING AND INT 
+    PAGE_STR = f"Page {PAGE_NUM}"
+#***FINAL result Combining XPATH_BUTTON, PAGE NUMBER, AND CONCATENATING STR AND INT
+    PAGE_LOOP = f'//a[@aria-label="{PAGE_STR}"]'
+
+
+
 class ItemDescriptionLocators:
 
     ADD_TO_CART = "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/button"
@@ -59,3 +72,37 @@ class AdminLocators:
     USERNAME = "username"
     PASSWORD = "login"
     SIGN_IN_BUTTON = "//*[@id='login-form']/fieldset/div[3]/div[1]/button/span"
+
+class CatBooksLocators:
+    #BY XPATH
+    H1_BOOKS = "//*[@id='6']"
+#****H2_Under BOOKS 
+    H2_CHILDRENS ="//*[@id='9']/figcaption"
+    #"//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[1]/a"
+    H2_DESIGN = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[2]/a"
+    H2_GRAPHIC_NOVEL = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[3]/a"
+    H2_HUMANITIES = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[4]/a"
+    H2_LIFESTYLE = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[5]/a"
+    H2_PROFESSIONAL = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[6]/a"
+
+#****H3_UNDER CHILDRENS
+    H3_BIBLES = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[1]/a"
+    H3_JUVENILE_FICTION = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[3]/a"
+    H3_JUVENILE_NON_FICTION = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[4]/a"
+    H3_EDUCATION = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[2]/a"
+    H3_STUDY_AIDS = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[5]/a"
+    H3_YOUNG_ADULT_FICTION = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[6]/a"
+    H3_YOUNG_ADULT_NON_FICTION = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[7]/a"
+    
+    
+
+class CatNonBooksLocators:
+    H1_NON_BOOKS = "//*[@id='294']"
+#****H2_UNDER NONBOOKS
+    H2_ART_SUPPLIES = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[1]/a"
+    # H2_CALENDAR_PLANNERS = 
+    # H2_CARDS_GIFTWRAP = 
+    # H2_CHARACTER = 
+    # H2_LIFESTYLE = 
+    # H2_NOTEBOOKS_JOURNALS = 
+    # H2_SUPPLIES = 
