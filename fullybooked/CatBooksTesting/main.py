@@ -4,7 +4,7 @@ load_dotenv('fullybooked\main\.env')
 
 FB_USERNAME: str = os.getenv('USERNAME_INPUT')
 FB_PASSWORD: str = os.getenv('PASSWORD_INPUT')
-'''
+
 class ChildrenMain(unittest.TestCase):
         
     def setUp(self):
@@ -52,7 +52,7 @@ class ChildrenMain(unittest.TestCase):
     def test_g_yafic(self):
         books_instance = YANFic(self.driver)
         books_instance.YANFicTesting()
-'''
+
 class DesignMain(unittest.TestCase):
 
     def setUp(self):
@@ -88,16 +88,39 @@ class DesignMain(unittest.TestCase):
         books_instance = Fashion(self.driver)
         books_instance.CatTesting()
     
-    def test_l_gardening(self):
-        books_instance = Gardening(self.driver)
-        books_instance.CatTesting()
-    
     def test_m_graphicarts(self):
         books_instance = GraphicArts(self.driver)
         books_instance.CatTesting()
     
     def test_n_househome(self):
         books_instance = HouseHome(self.driver)
+        books_instance.CatTesting()
+
+class GraphicNovelMain(unittest.TestCase):
+
+    def setUp(self):
+
+        self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
+        self.driver.get("https://www.fullybookedonline.com")
+        self.driver.implicitly_wait(10)
+
+        Books = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, CatBooksLocators.H1_BOOKS)))
+        actions = ActionChains(self.driver)
+        actions.move_to_element(Books).perform()
+    
+        GN = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, CatBooksLocators.H2_GRAPHIC_NOVEL)))
+        GN.click()
+        print("Clicked H2_Graphic Novel Category")
+
+    def test_o_gn(self):
+        books_instance = GraphicNovel(self.driver)
+        books_instance.CatTesting()
+
+    def test_p_manga(self):
+        books_instance = Manga(self.driver)
         books_instance.CatTesting()
 
 if __name__ == "__main__":

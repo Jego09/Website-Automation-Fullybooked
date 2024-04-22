@@ -14,6 +14,8 @@ from Design.DesignArchitechture import *
 from Design.DesignArt import *
 from Design.DesignBioAutography import *
 from Design.DesignFashion import *
-from Design.DesignGardening import *
 from Design.DesignGraphicArts import *
 from Design.DesignHouseHome import *
+from GraphicNovel.GraphicNovelGN import *
+from GraphicNovel.GraphicNovelManga import *
+
