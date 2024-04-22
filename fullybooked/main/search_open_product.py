@@ -14,6 +14,7 @@ class search():
         
     def search_bar(self):
         # for _ in range(5): #repeats the process on a specific value
+        print("------------SEARCH_OPEN_PRODUCT PROC--------------")
         try:
             for _ in range (5):
             # Generate a random book title

@@ -13,7 +13,7 @@ class open_pages():
 
     def blogs(self):
         #for _ in range(2):
-
+            print("------------OPEN_PAGES(BLOGS) PROC--------------")
             blog_button = self.driver.find_element(By.XPATH, "//*[@id='2459']/figcaption")
             blog_button.click()
             print("Clicked the blog button")

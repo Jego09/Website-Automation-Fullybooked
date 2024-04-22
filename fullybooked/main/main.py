@@ -20,26 +20,25 @@ class FullyBookTest(unittest.TestCase):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
         self.driver.get("https://www.fullybookedonline.com")
-        print("Open Chrome")
         
         self.driver.implicitly_wait(10)
 
         login_register_button = self.driver.find_element(By.ID, Login.LOGIN_LOGO) 
         login_register_button.click()
-        print("Clicked Login/Register Button")
+        # print("Clicked Login/Register Button")
 
         username = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.ID, Login.USERNAME_TXTBOX)))
         username.send_keys(FB_USERNAME)
-        print("Entered Username")
+        # print("Entered Username")
 
         password = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.ID, Login.PASSWORD_TXTBOX)))
         password.send_keys(FB_PASSWORD)
-        print("Entered Password")
+        # print("Entered Password")
 
         login_button = self.driver.find_element(By.XPATH, Login.LOGIN_BUTTON)
-        print("Clicked Login Button")
+        # print("Clicked Login Button")
         login_button.click()
         time.sleep(2)
 

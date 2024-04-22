@@ -13,7 +13,7 @@ class checkout():
 
     def checkout_complete(self):
         try:
-            
+            print("------------CHECKOUT PROC--------------")
             search_field = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.ID, HeaderLocators.SEARCH_INPUT))
             )

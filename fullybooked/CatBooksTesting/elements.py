@@ -78,12 +78,11 @@ class CatBooksLocators:
     H1_BOOKS = "//*[@id='6']"
 #****H2_Under BOOKS 
     H2_CHILDRENS ="//*[@id='9']/figcaption"
-    #"//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[1]/a"
-    H2_DESIGN = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[2]/a"
-    H2_GRAPHIC_NOVEL = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[3]/a"
-    H2_HUMANITIES = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[4]/a"
-    H2_LIFESTYLE = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[5]/a"
-    H2_PROFESSIONAL = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[6]/a"
+    H2_DESIGN = "//*[@id='33']/figcaption"
+    H2_GRAPHIC_NOVEL = "//*[@id='72']/figcaption"       
+    H2_HUMANITIES = "//*[@id='81']/figcaption"
+    H2_LIFESTYLE = "//*[@id='123']/figcaption"
+    H2_PROFESSIONAL = "//*[@id='234']/figcaption"
 
 #****H3_UNDER CHILDRENS
     H3_BIBLES = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[1]/a"
@@ -94,7 +93,15 @@ class CatBooksLocators:
     H3_YOUNG_ADULT_FICTION = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[6]/a"
     H3_YOUNG_ADULT_NON_FICTION = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[7]/a"
     
-    
+#****H3_UNDER DESIGN
+
+    H3_ARCHITECTURE = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[1]/a"
+    H3_ART = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[2]/a"
+    H3_FASHION = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[2]/a"
+    H3_BIOGRAPHY_AUTOBIOGRAPHY = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[4]/a"
+    H3_GARDENING = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[5]/a"
+    H3_HOUSE_HOME = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[6]/a"
+    H3_GRAPHIC_ARTS = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[7]/a"
 
 class CatNonBooksLocators:
     H1_NON_BOOKS = "//*[@id='294']"

@@ -20,7 +20,8 @@ class admin():
         def admin_login(self):
             self.driver = webdriver.Chrome()
             self.driver.maximize_window()
-            self.driver.get("https://www.Fullybookedonline.com/fbqdm1n")     
+            self.driver.get("https://www.Fullybookedonline.com/fbqdm1n")   
+            print("------------ADMIN PROC--------------")  
 
             username = self.driver.find_element(By.ID, AdminLocators.USERNAME)
             username.send_keys(AD_USERNAME)

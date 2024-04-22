@@ -16,6 +16,8 @@ class wishlist():
 
         def wishlist_with_acc(self):
             
+            print("------------WISHLIST PROC--------------")
+
             random_title = generate_random_title()
             
             # Locate the search field and send the random title

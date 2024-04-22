@@ -12,6 +12,7 @@ class store_locator():
         self.driver = driver
     
     def locator(self):
+        print("------------STORE_LOCATOR PROC--------------")
         locator_click = self.driver.find_element(By.XPATH, "//*[@id='root']/div/footer/div[3]/div/div/div/div/div/div[2]/details[1]/ul/li[7]/a")
         print("Clicked Store Locator Button")        
         locator_click.click()
