@@ -74,9 +74,11 @@ class AdminLocators:
     SIGN_IN_BUTTON = "//*[@id='login-form']/fieldset/div[3]/div[1]/button/span"
 
 class CatBooksLocators:
-    #BY XPATH
+
     H1_BOOKS = "//*[@id='6']"
+
 #****H2_Under BOOKS 
+
     H2_CHILDRENS ="//*[@id='9']/figcaption"
     H2_DESIGN = "//*[@id='33']/figcaption"
     H2_GRAPHIC_NOVEL = "//*[@id='72']/figcaption"       
@@ -85,6 +87,7 @@ class CatBooksLocators:
     H2_PROFESSIONAL = "//*[@id='234']/figcaption"
 
 #****H3_UNDER CHILDRENS
+
     H3_BIBLES = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[1]/a"
     H3_JUVENILE_FICTION = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[3]/a"
     H3_JUVENILE_NON_FICTION = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[4]/a"
@@ -106,6 +109,18 @@ class CatBooksLocators:
 
     H3_GRAPHIC_NOVEL = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[1]/a"
     H3_MANGA = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[2]/a"
+
+#****H3_UNDER HUMANITIES
+
+    H3_FICTION = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[1]/a"
+    H3_HISTORY = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[2]/a"
+    H3_LITERARY = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[3]/a"
+    H3_POETRY = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[3]/a"
+    H3_POLSCI = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[5]/a"
+    H3_RELIGION = '//*[@id="root"]/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[6]/a'
+    H3_SOCIALSCI = '//*[@id="root"]/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[7]/a'
+
+
 
 class CatNonBooksLocators:
     H1_NON_BOOKS = "//*[@id='294']"

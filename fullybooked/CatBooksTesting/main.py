@@ -4,7 +4,7 @@ load_dotenv('fullybooked\main\.env')
 
 FB_USERNAME: str = os.getenv('USERNAME_INPUT')
 FB_PASSWORD: str = os.getenv('PASSWORD_INPUT')
-
+'''
 class ChildrenMain(unittest.TestCase):
         
     def setUp(self):
@@ -121,6 +121,53 @@ class GraphicNovelMain(unittest.TestCase):
 
     def test_p_manga(self):
         books_instance = Manga(self.driver)
+        books_instance.CatTesting()
+'''
+class HumanitiesMain(unittest.TestCase):
+
+    def setUp(self):
+
+        self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
+        self.driver.get("https://www.fullybookedonline.com")
+        self.driver.implicitly_wait(10)
+
+        Books = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, CatBooksLocators.H1_BOOKS)))
+        actions = ActionChains(self.driver)
+        actions.move_to_element(Books).perform()
+    
+        GN = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, CatBooksLocators.H2_HUMANITIES)))
+        GN.click()
+        print("Clicked H2_HUMANITIES Category")
+    
+    def test_q_fiction(self):
+        books_instance = Fiction(self.driver)
+        books_instance.CatTesting()
+    
+    def test_r_history(self):
+        books_instance = History(self.driver)
+        books_instance.CatTesting()
+    
+    def test_s_literary(self):
+        books_instance = Literary(self.driver)
+        books_instance.CatTesting()
+
+    def test_t_poetry(self):
+        books_instance = Poetry(self.driver)
+        books_instance.CatTesting
+
+    def test_u_polsci(self):
+        books_instance = PolSci(self.driver)
+        books_instance.CatTesting()
+
+    def test_v_religion(self):
+        books_instance = Religion(self.driver)
+        books_instance.CatTesting
+    
+    def test_w_socialsci(self):
+        books_instance = SocialSci(self.driver)
         books_instance.CatTesting()
 
 if __name__ == "__main__":

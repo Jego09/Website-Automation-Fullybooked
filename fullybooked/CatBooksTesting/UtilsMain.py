@@ -18,4 +18,12 @@ from Design.DesignGraphicArts import *
 from Design.DesignHouseHome import *
 from GraphicNovel.GraphicNovelGN import *
 from GraphicNovel.GraphicNovelManga import *
+from Humanities.HumanitiesFiction import *
+from Humanities.HumanitiesHistory import *
+from Humanities.HumanitiesLiterary import *
+from Humanities.HumanitiesPoetry import *
+from Humanities.HumanitiesPolSci import *
+from Humanities.HumanitiesReligion import *
+from Humanities.HumanitiesSocialSci import *
+
 
