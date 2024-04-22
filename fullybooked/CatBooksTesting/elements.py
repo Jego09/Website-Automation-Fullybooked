@@ -97,7 +97,7 @@ class CatBooksLocators:
 
     H3_ARCHITECTURE = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[1]/a"
     H3_ART = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[2]/a"
-    H3_FASHION = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[2]/a"
+    H3_FASHION = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[3]/a"
     H3_BIOGRAPHY_AUTOBIOGRAPHY = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[4]/a"
     H3_GARDENING = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[5]/a"
     H3_HOUSE_HOME = "//*[@id='root']/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[6]/a"
