@@ -4,7 +4,7 @@ load_dotenv('fullybooked\main\.env')
 
 FB_USERNAME: str = os.getenv('USERNAME_INPUT')
 FB_PASSWORD: str = os.getenv('PASSWORD_INPUT')
-'''
+
 class ChildrenMain(unittest.TestCase):
         
     def setUp(self):
@@ -21,13 +21,14 @@ class ChildrenMain(unittest.TestCase):
         Books.click()
         print("Clicked Books Category")
 
+        Childrens = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, CatBooksLocators.H2_CHILDRENS)))
+        Childrens.click()
+        print("Clicked Childrens Category")        
+
     def tearDown(self):
         if self.driver:
             self.driver.quit()
-
-    def test_a_bibles(self):
-        books_instance = Bibles(self.driver)
-        books_instance.BiblesTesting()
 
     def test_b_education(self):
         books_instance = Education(self.driver)
@@ -122,7 +123,7 @@ class GraphicNovelMain(unittest.TestCase):
     def test_p_manga(self):
         books_instance = Manga(self.driver)
         books_instance.CatTesting()
-'''
+
 class HumanitiesMain(unittest.TestCase):
 
     def setUp(self):
@@ -169,6 +170,22 @@ class HumanitiesMain(unittest.TestCase):
     def test_w_socialsci(self):
         books_instance = SocialSci(self.driver)
         books_instance.CatTesting()
+
+# class LifestyleMain(unittest.TestCase):
+
+    # def setUp(self):
+
+    #     self.driver = webdriver.Chrome()
+    #     self.driver.maximize_window()
+    #     self.driver.get("https://www.fullybookedonline.com")
+    #     self.driver.implicitly_wait(10)
+
+    #     Books = WebDriverWait(self.driver, 10).until(
+    #         EC.presence_of_element_located((By.XPATH, CatBooksLocators.H1_BOOKS)))
+    #     actions = ActionChains(self.driver)
+    #     actions.move_to_element(Books).perform()
+
+        
 
 if __name__ == "__main__":
     unittest.main()

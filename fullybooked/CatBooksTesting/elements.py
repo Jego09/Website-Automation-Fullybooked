@@ -121,7 +121,6 @@ class CatBooksLocators:
     H3_SOCIALSCI = '//*[@id="root"]/div/div[2]/main/section/div/article/div/div[1]/div/div/ul/li[7]/a'
 
 
-
 class CatNonBooksLocators:
     H1_NON_BOOKS = "//*[@id='294']"
 #****H2_UNDER NONBOOKS

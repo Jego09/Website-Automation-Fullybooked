@@ -13,26 +13,13 @@ class GraphicArts():
                 GraphicArts.click()
                 print("Clicked Graphic Arts Category")
 
-                sort_by = WebDriverWait(self.driver, 10).until(
-                     EC.presence_of_element_located((By.XPATH, "//*[@id='category-sort_wrapper']/div"))
-                )
-                sort_by.click()
+                sort_newest = SortBy(self.driver)
+                sort_newest.sort_newest()
 
-                newest = self.driver.find_element(By.XPATH, "//*[@id='oASC newest']")
-                newest.click()
-
-                page_number = 1
+                page_clicker = PageClicker(self.driver)
 
                 while True:
-                    
-                    page_str = f"Page {page_number}"
-                    
-                    element = WebDriverWait(self.driver, 10).until(
-                        EC.visibility_of_element_located((By.XPATH, f'//a[@aria-label="{page_str}"]')))
-                    element.click()
-                    print(f"Clicked page {page_number}")
-                    
-                    page_number += 1
+                     page_clicker.click_next_page()
     
             except TimeoutException:
                 print("TimeoutException: Error Fetching Occured or Last page reached")
