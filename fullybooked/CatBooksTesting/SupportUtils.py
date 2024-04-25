@@ -22,7 +22,7 @@ class SortBy:
         )
         sort_newest.click()
 
-        newest = self.driver.find_element(By.XPATH, "//*[@id='oASC newest']")
+        newest = self.driver.find_element(By.XPATH, SortByLocators.LOW_TO_HIGH)
         newest.click()        
 
 

@@ -59,3 +59,5 @@ class AdminLocators:
     USERNAME = "username"
     PASSWORD = "login"
     SIGN_IN_BUTTON = "//*[@id='login-form']/fieldset/div[3]/div[1]/button/span"
+
+

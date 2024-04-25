@@ -1,10 +1,5 @@
 from UtilsMain import *
-
-load_dotenv('fullybooked\main\.env')
-
-FB_USERNAME: str = os.getenv('USERNAME_INPUT')
-FB_PASSWORD: str = os.getenv('PASSWORD_INPUT')
-
+'''
 class ChildrenMain(unittest.TestCase):
         
     def setUp(self):
@@ -45,7 +40,7 @@ class ChildrenMain(unittest.TestCase):
     def test_e_study_aids(self):
         books_instance = StudyAids(self.driver)
         books_instance.StudyAidsTesting()
-    
+
     def test_f_yafic(self):
         books_instance = YAFic(self.driver)
         books_instance.YAFicTesting()
@@ -53,7 +48,7 @@ class ChildrenMain(unittest.TestCase):
     def test_g_yafic(self):
         books_instance = YANFic(self.driver)
         books_instance.YANFicTesting()
-
+    
 class DesignMain(unittest.TestCase):
 
     def setUp(self):
@@ -126,6 +121,7 @@ class GraphicNovelMain(unittest.TestCase):
 
 class HumanitiesMain(unittest.TestCase):
 
+
     def setUp(self):
 
         self.driver = webdriver.Chrome()
@@ -170,6 +166,40 @@ class HumanitiesMain(unittest.TestCase):
     def test_w_socialsci(self):
         books_instance = SocialSci(self.driver)
         books_instance.CatTesting()
+'''
+class HeadersMain(unittest.TestCase):
+
+    def setUp(self):
+
+        self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
+        self.driver.get("https://www.fullybookedonline.com")
+        self.driver.implicitly_wait(10)
+
+    def tearDown(self):
+        if self.driver:
+            self.driver.quit()
+
+    # def test_x_bestsellers(self):
+    #     books_instance = Bestsellers(self.driver)
+    #     books_instance.CatTesting()
+    
+    def test_y_collections(self):
+        books_instance = Collections(self.driver)
+        books_instance.CatTesting()
+    
+    # def test_z_new(self):
+    #     books_instance = New(self.driver)
+    #     books_instance.CatTesting()
+    
+    # def test_aa_preorders(self):
+    #     books_instance = PreOrders(self.driver)
+    #     books_instance.CatTesting()
+    
+    # def test_ab_sale(self):
+    #     books_instance = Sale(self.driver)
+    #     books_instance.CatTesting()
+
 
 # class LifestyleMain(unittest.TestCase):
 

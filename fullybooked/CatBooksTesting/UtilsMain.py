@@ -2,6 +2,7 @@ import unittest
 from selenium import webdriver
 from elements import *
 from dotenv import load_dotenv
+import unittest
 import os
 from Children.ChildrenJuvenileFic import *
 from Children.ChildrenNonJuvenileFic import *
@@ -24,5 +25,9 @@ from Humanities.HumanitiesPoetry import *
 from Humanities.HumanitiesPolSci import *
 from Humanities.HumanitiesReligion import *
 from Humanities.HumanitiesSocialSci import *
-
+from Headers.BestSellers import *
+from Headers.Collections import *
+from Headers.New import *
+from Headers.PreOrders import *
+from Headers.Sale import *
 

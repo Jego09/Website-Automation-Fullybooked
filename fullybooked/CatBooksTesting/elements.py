@@ -1,53 +1,3 @@
-class Login:
-    
-    #Login Locators in Fullybooked Website
-    LOGIN_LOGO = "myAccount"
-    USERNAME_TXTBOX = "email"
-    PASSWORD_TXTBOX = "password"
-    LOGIN_BUTTON = "//*[@id='root']/div/section/header/nav/div[2]/div/div/div/form/div[4]/button"
-
-class HeaderLocators:
-
-    SEARCH_INPUT = "search-field"
-    CART_BUTTON = "//*[@id='root']/div/section[1]/header/nav/div[4]/button"
-    WISHLIST_BUTTON = "//*[@id='root']/div/section[1]/header/nav/div[3]/a"
-
-class CategoryPageLocators:
-
-    #XPATH Of First & Second Item
-    FIRST_ITEM = "//*[@id='root']/div/div[2]/main/section/div/div[2]/div/ul/div[1]/a/div[2]/p"
-    SECOND_ITEM = "//*[@id='root']/div/div[2]/main/section/div/div[2]/div/ul/div[2]/a/div[2]/p"
-    #Class ID of Items
-    PRODUCT_ITEM = "ProductCard-Name"
-
-#***XPATH OF ARIA-LABEL AS PAGE NUMBER
-    PAGE_ARIA = "f'//a[@aria-label="
-#***XPATH OF PAGE_BUTTON
-    PAGE_BUTTON = "//a[@aria-label='Page 1']"
-#***Declaring the page number
-    PAGE_NUM = 1
-#***CONCATENATING STRING AND INT 
-    PAGE_STR = f"Page {PAGE_NUM}"
-#***FINAL result Combining XPATH_BUTTON, PAGE NUMBER, AND CONCATENATING STR AND INT
-    PAGE_LOOP = f'//a[@aria-label="{PAGE_STR}"]'
-
-
-
-class ItemDescriptionLocators:
-
-    ADD_TO_CART = "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/button"
-    NOTIFY_BUTTON = "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/section/div/div/button"
-    WISHLIST_BUTTON = "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[6]/div[1]/button/div"
-    
-class CartHeaderLocators:
-
-    VIEW_CART = "//*[@id='root']/div/section[1]/header/nav/div[4]/div/div/div[2]/div/a"
-    CHECKOUT_BUTTON = "//*[@id='root']/div/section[1]/header/nav/div[4]/div/div/div[2]/div/button"
-
-class ShoppingCartLocators:
-
-    CHECKOUT_CART = "//*[@id='root']/div/div[2]/main/section/div/div[2]/article/article/div[2]/div/ul/div[2]/div/button"
-
 class NotificationLocators:
 
     #Product was Added to Cart Notification
@@ -56,22 +6,6 @@ class NotificationLocators:
     ERROR_FETCHING = "//*[@id='root']/div/div[1]/div" 
     ERROR_MESSAGE = "is Triggered"
     NOTIF_GENERAL = "//*[@id='root']/div/div[1]"
-
-class ShippingDetailsLocators:
-
-    NOTES_INPUT = "//*[@id='SHIPPING_STEP']/div[2]/div/div/div/div/div/textarea"
-    PAY_TO_BILLING = "//*[@id='SHIPPING_STEP']/div[4]/button"
-
-class PaymentDetailsLocators:
-    
-    COD_BUTTON = "//*[@id='option-Cash On Delivery']"
-    TAC_BUTTON = "//*[@id='termsAndConditions']"
-    PO_BUTTON = "//*[@id='BILLING_STEP']/div[4]/button"
-
-class AdminLocators:
-    USERNAME = "username"
-    PASSWORD = "login"
-    SIGN_IN_BUTTON = "//*[@id='login-form']/fieldset/div[3]/div[1]/button/span"
 
 class CatBooksLocators:
 
@@ -131,3 +65,18 @@ class CatNonBooksLocators:
     # H2_LIFESTYLE = 
     # H2_NOTEBOOKS_JOURNALS = 
     # H2_SUPPLIES = 
+
+class SortByLocators:
+
+    NEWEST = "//*[@id='oASC newest']"
+    LOW_TO_HIGH = '//*[@id="oASC price"]'
+    HIGH_TO_LOW = '//*[@id="oASC price"]'
+
+class HeadersLocator:
+
+    BESTSELLERS = '//*[@id="495"]/figcaption'
+    COLLECTIONS = '//*[@id="2332"]/figcaption'
+    NEW = '//*[@id="498"]'
+    PREORDERS = '//*[@id="501"]'
+    SALE = '//*[@id="504"]'
+    
