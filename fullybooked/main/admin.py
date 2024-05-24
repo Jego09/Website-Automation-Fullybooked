@@ -10,18 +10,23 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv('fullybooked\main\.env')
+# load_dotenv('D:\Python Projects\main\Jego-event-notes\fullybooked\main\.env')
 
-AD_USERNAME: str = os.getenv('USERNAME_ADMIN')
-AD_PASSWORD: str = os.getenv('PASSWORD_ADMIN')
+AD_USERNAME: str = os.getenv("USERNAME_ADMIN")
+AD_PASSWORD: str = os.getenv("PASSWORD_ADMIN")
 
 class admin():
 
     try:
         def admin_login(self):
+
             self.driver = webdriver.Chrome()
             self.driver.maximize_window()
             self.driver.get("https://www.Fullybookedonline.com/fbqdm1n")   
             print("------------ADMIN PROC--------------")  
+            self.driver.implicitly_wait(10)
+
+            print("Value of username:", AD_USERNAME)
 
             username = self.driver.find_element(By.ID, AdminLocators.USERNAME)
             username.send_keys(AD_USERNAME)

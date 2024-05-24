@@ -1,0 +1,276 @@
+[33mcommit 90032fac7b2e6640622a23de1cfcc26c09e90c76[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: c9b8031 10eb5b0
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Thu Apr 25 09:52:07 2024 +0800
+
+    Merge branch 'main' of https://github.com/Jego09/Jego-event-notes
+
+[33mcommit c9b8031e11f7eafd75caad9af816b7beb0b3c974[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Thu Apr 25 09:51:48 2024 +0800
+
+    Added Headers Page
+
+[33mcommit 10eb5b0bbed20f5622685beb1d7fc1ba3f15e4ed[m
+Author: Jego09 <91614289+Jego09@users.noreply.github.com>
+Date:   Tue Apr 23 09:26:54 2024 +0800
+
+    Update README.md
+
+[33mcommit 166e51fb420a15827fde24251966c2a3d6376703[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Tue Apr 23 08:57:26 2024 +0800
+
+    Created a class file for Sort & Page Clicker.
+
+[33mcommit b488e03026b7ad4a1de204db01de9cb05bd41bef[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Mon Apr 22 11:48:34 2024 +0800
+
+    Added Humanities Category
+
+[33mcommit 315f60bf273eff38a63e31f2e5c7939f348d93f8[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Mon Apr 22 10:09:20 2024 +0800
+
+    Added Graphic Novel Category
+
+[33mcommit 9f46da07db356e8b99a1d85f730c56e7745193ad[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Mon Apr 22 09:18:43 2024 +0800
+
+    Removed Gardening H3_Category
+
+[33mcommit 03213e9dd22e5fb4a9ad09d954d26edd84bcf380[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Mon Apr 22 09:13:47 2024 +0800
+
+    Added Design Category and Under it
+
+[33mcommit 4aa1ef51ba88962d61c9aa187cf2b1ede3e6cc30[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Fri Apr 19 15:34:55 2024 +0800
+
+    deleted gitignore on Children folder
+
+[33mcommit 3c9102144f1631973a01aa16d542767eef027528[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Fri Apr 19 15:23:49 2024 +0800
+
+    Added/Modified a bunch of things
+
+[33mcommit 55fea88c9ca03bdeb16b63238e5524a6da60a750[m
+Merge: fad623f 57a81b0
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Thu Apr 18 09:48:20 2024 +0800
+
+    Merge branch 'main'
+
+[33mcommit fad623f0ef9a0835194600f79c852547007b691c[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Thu Apr 18 09:48:01 2024 +0800
+
+    Update main.py
+
+[33mcommit 57a81b0c73086cec75729e3ff4c6f6aaf49037d7[m
+Author: Jego09 <91614289+Jego09@users.noreply.github.com>
+Date:   Thu Apr 18 09:23:32 2024 +0800
+
+    Update sampleEnv
+
+[33mcommit b8edb8a0a050c95b8603e186df64a00edebb1bb2[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Thu Apr 18 09:22:02 2024 +0800
+
+    Update main.py
+
+[33mcommit 25bef959fbc1b9120a2aabb3c460b0a40ee80c9e[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Thu Apr 18 09:21:30 2024 +0800
+
+    Modified main
+
+[33mcommit 3e6f01d35fcd93ce5b3f36f416caf68d3e605c32[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Thu Apr 18 09:20:32 2024 +0800
+
+    A = .env, D = login, logincustomer. M = admin, elements, main
+
+[33mcommit 1ec758f7e7b4aaef634368441d11b0a0ce7e1308[m
+Merge: 2ee58d8 e7d4746
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Thu Apr 18 08:48:16 2024 +0800
+
+    Merge branch 'main' of https://github.com/Jego09/Jego-event-notes
+
+[33mcommit 2ee58d8b7f6d079a6f60e631e135dffa34efaf37[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Thu Apr 18 08:40:57 2024 +0800
+
+    Updates: Trying gitignore but its not working, idk why lol
+
+[33mcommit 68f8f13636ce13671d41dfb4de84d0143b67ed07[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Thu Apr 18 08:36:53 2024 +0800
+
+    Adding gitignore
+
+[33mcommit e7d4746144d080007c7082186a1c56aa5b39131d[m
+Author: Jego09 <91614289+Jego09@users.noreply.github.com>
+Date:   Thu Apr 18 08:34:32 2024 +0800
+
+    Delete fullybooked/main/.env
+
+[33mcommit 9cce57d4124d02a336e2ac270ee22177d2f4d47c[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Tue Apr 16 10:30:39 2024 +0800
+
+    Test for .env files
+
+[33mcommit 868093a1f440a1e7a5293d130a5003e7fbef7118[m
+Author: Jego09 <91614289+Jego09@users.noreply.github.com>
+Date:   Tue Apr 16 10:28:34 2024 +0800
+
+    Delete fullybooked/main/.env
+    
+    Failed
+
+[33mcommit dd17c20de9cf136db8a2b1e096e9274da9c373ec[m
+Merge: 6eeae8b 0440bd0
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Tue Apr 16 10:25:30 2024 +0800
+
+    Merge branch 'main' of https://github.com/Jego09/Jego-event-notes
+
+[33mcommit 6eeae8b30e23ae4140c19288505ed54301b36108[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Tue Apr 16 10:24:22 2024 +0800
+
+    Testing if .env file will not be pushed into repo
+
+[33mcommit ad047c5b7508135c2613c3e00b2cbd88fd729517[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Tue Apr 16 10:23:42 2024 +0800
+
+    Add .gitignore for .env files
+
+[33mcommit 0440bd0c86adac256415b4ada8e10edb45b3d726[m
+Author: Jego09 <91614289+Jego09@users.noreply.github.com>
+Date:   Thu Apr 11 11:01:01 2024 +0800
+
+    Delete fullybooked/chromedriver.exe
+    
+    Delete chromedriver.exe
+
+[33mcommit 504d822ee5642d1f1ff5336a943857da54b182c4[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Mon Apr 8 15:51:24 2024 +0800
+
+    Update Admin and Elements
+
+[33mcommit 7f1e996f833a25ae0a059fd8bbd40d4c0ff7746d[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Mon Apr 8 14:17:54 2024 +0800
+
+    Update main.py, and search_open_product.py
+
+[33mcommit 7e13cb7371438bedbec99b86b5a46e3364bbd990[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Mon Apr 8 13:54:32 2024 +0800
+
+    Update Checkout_complete
+
+[33mcommit 4e79af86cdaf8a8f77dc8a167889620eb53f6d37[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Mon Apr 8 12:13:57 2024 +0800
+
+    Added Elements File
+
+[33mcommit b3209783b83006fc796b5f1d275957ed86801107[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Fri Apr 5 11:17:32 2024 +0800
+
+    Updates on Checkout_complete and main
+
+[33mcommit 389ac282474ce18c4bdca66fff382d1f25b5527a[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Fri Apr 5 11:03:51 2024 +0800
+
+    Added/Deleted Various codes, enhance speed by replacing time.sleep function on certain lines
+
+[33mcommit 8ea748112bc9def09c4539c18bce80da50f6519f[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Thu Apr 4 08:05:39 2024 +0800
+
+    added webdriverwait on add to cart button
+
+[33mcommit 62f4a5c0975b93ef83f17ace2ce5eed9f3f2d75f[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Wed Apr 3 08:01:15 2024 +0800
+
+    Added/Deleted some lines
+
+[33mcommit 2230e60a10fa95e500614b45ffe14f3a8b9ae236[m
+Merge: ecd04ce 2309362
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Wed Apr 3 07:55:52 2024 +0800
+
+    Merge branch 'main' of https://github.com/Jego09/Jego-event-notes
+    
+    Testing warawiwaw
+
+[33mcommit ecd04cea94d6cc11dfee7e056ab24f2bc4b3785d[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Wed Apr 3 07:55:07 2024 +0800
+
+    Updates
+
+[33mcommit 230936294fd4625491f5114d076bf6fd4c749c1c[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Tue Apr 2 21:41:28 2024 +0800
+
+    Testing git commit
+
+[33mcommit 5e3a74adaeff09fb9ef0724df4a6dd8d4a63d781[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Tue Apr 2 15:52:35 2024 +0800
+
+    For Testing Only
+
+[33mcommit 6840ee881f5462f32f81b4ca95135b06b7ba87dd[m
+Author: jego09 <jegolimpiado@gmail.com>
+Date:   Tue Apr 2 15:45:39 2024 +0800
+
+    Your commit message here
+
+[33mcommit 0337cf8473fe130e8c88fee3bf28c06c380b9ed0[m
+Author: Jego09 <91614289+Jego09@users.noreply.github.com>
+Date:   Wed Mar 27 09:52:27 2024 +0800
+
+    Update README.md
+
+[33mcommit e49c9057d4b3c3d6760c75e8dce2ca351b48d70b[m
+Author: Jego09 <91614289+Jego09@users.noreply.github.com>
+Date:   Wed Mar 27 09:47:07 2024 +0800
+
+    Update wishlist_no_acc.py
+    
+    Removed the wishlist without acc instance.
+
+[33mcommit c0c267e06872eaa0378658318ecdaa9e742a0af0[m
+Author: Jego09 <91614289+Jego09@users.noreply.github.com>
+Date:   Wed Mar 27 09:46:24 2024 +0800
+
+    Update wishlist_no_acc.py
+    
+    Commented out the wishlist without account method, but I did not change the name of the file intentionally. Also removed the login credentials
+
+[33mcommit 012db9197367b590c40febed12a2d6518077b78d[m
+Author: Jego09 <91614289+Jego09@users.noreply.github.com>
+Date:   Wed Mar 27 09:44:20 2024 +0800
+
+    Update store_locator.py
+    
+    Removed the login parameters
+
+[3

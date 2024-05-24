@@ -7,6 +7,7 @@ from titleList import generate_random_title
 from selenium.common.exceptions import *
 from elements import *
 import random
+import time
 
 class search():
     def __init__(self, driver):
@@ -50,6 +51,7 @@ class search():
                 elements_p = random.choice(random_item)
                 elements_p.click()
                 print("Clicked a Random Title")
+                time.sleep(5)
                 
                 #waits for Notify Me or Add to cart to be located / Notify me and Add to cart are separated by | 
                 # WebDriverWait(self.driver, 15).until(

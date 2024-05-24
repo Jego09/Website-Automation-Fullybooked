@@ -7,7 +7,6 @@ import time
 
 class contact_us():
 
-    print("------------CONTACT_US PROC--------------")
     def __init__(self, driver):
         self.driver = driver
         

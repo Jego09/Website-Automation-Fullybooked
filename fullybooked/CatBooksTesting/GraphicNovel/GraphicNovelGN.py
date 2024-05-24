@@ -6,6 +6,7 @@ class GraphicNovel():
         self.driver = driver
 
     def CatTesting(self):
+
             try:
 
                 GraphicNovel = WebDriverWait(self.driver, 10).until(
@@ -20,7 +21,7 @@ class GraphicNovel():
 
                 while True:
                      page_clicker.click_next_page()
-    
+            
             except TimeoutException:
                 print("TimeoutException: Error Fetching Occured or Last page reached")
                 self.driver.quit()

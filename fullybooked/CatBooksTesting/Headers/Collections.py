@@ -17,12 +17,22 @@ class Collections():
 
                 sort_newest = SortBy(self.driver)
                 sort_newest.sort_newest()
-
+                
                 page_clicker = PageClicker(self.driver)
+                error_fetch = PageClicker(self.driver)
 
                 while True:
-                     page_clicker.click_next_page()
-    
+                    page_clicker.click_next_page()
+                #     error_fetch.errorFetch()
+
+            #     while True:
+                    
+            #             if not page_clicker.click_next_page():
+            #                 error_fetch.errorFetch()
+            # except Exception as e:
+            #     error_fetch.errorFetch()
+            #     print(f"An error occurred: {e}")
+
             except TimeoutException:
                 print("TimeoutException: Error Fetching Occured or Last page reached")
                 self.driver.quit()
@@ -34,5 +44,4 @@ class Collections():
 if __name__ == "__main__":
     books_instance = Collections()
     books_instance.CatTesting()
-
 

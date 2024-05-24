@@ -32,18 +32,19 @@ class checkout():
             )
             p_elements.click()
             print("Clicked a Title")
-
+    
             # Check if the add to cart button exists using XPath
             add_cart = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, ItemDescriptionLocators.ADD_TO_CART)))
             # If the add to cart button exists, click on it
             add_cart.click()
             print("Clicked the Add To Cart Button.")
-
+            
             #Wait for Product added Notification
             WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, NotificationLocators.NOTIF_CART))
             )
+            time.sleep(2)
 
             #Opens Cart
             cart_button = self.driver.find_element(By.XPATH, HeaderLocators.CART_BUTTON)

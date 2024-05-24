@@ -3,7 +3,8 @@ class NotificationLocators:
     #Product was Added to Cart Notification
     NOTIF_CART = "//*[@id='root']/div/div[2]/main/section[1]/div/article/div[5]/button"
     NOTIF_WISHLIST = "//*[@id='root']/div/div[1]/div/p"
-    ERROR_FETCHING = "//*[@id='root']/div/div[1]/div" 
+    # ERROR_FETCHING = "//*[@id='root']/div/div[1]/div"
+    ERROR_FETCHING = "//body/div[@id='root']/div[1]/div[1]/div[1]/p[1]" 
     ERROR_MESSAGE = "is Triggered"
     NOTIF_GENERAL = "//*[@id='root']/div/div[1]"
 
@@ -70,7 +71,7 @@ class SortByLocators:
 
     NEWEST = "//*[@id='oASC newest']"
     LOW_TO_HIGH = '//*[@id="oASC price"]'
-    HIGH_TO_LOW = '//*[@id="oASC price"]'
+    HIGH_TO_LOW = '//*[@id="oDESC price"]'
 
 class HeadersLocator:
 

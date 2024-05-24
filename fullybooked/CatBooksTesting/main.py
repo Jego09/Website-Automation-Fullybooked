@@ -67,6 +67,10 @@ class DesignMain(unittest.TestCase):
             EC.presence_of_element_located((By.XPATH, CatBooksLocators.H2_DESIGN)))
         Design.click()
         print("Clicked H2_DESIGN Category")
+    
+    def tearDown(self):
+        if self.driver:
+            self.driver.quit()
 
     def test_h_architecture(self):
         books_instance = Architecture(self.driver)
@@ -111,6 +115,10 @@ class GraphicNovelMain(unittest.TestCase):
         GN.click()
         print("Clicked H2_Graphic Novel Category")
 
+    def tearDown(self):
+        if self.driver:
+            self.driver.quit()
+    
     def test_o_gn(self):
         books_instance = GraphicNovel(self.driver)
         books_instance.CatTesting()
@@ -120,7 +128,6 @@ class GraphicNovelMain(unittest.TestCase):
         books_instance.CatTesting()
 
 class HumanitiesMain(unittest.TestCase):
-
 
     def setUp(self):
 
@@ -138,7 +145,12 @@ class HumanitiesMain(unittest.TestCase):
             EC.presence_of_element_located((By.XPATH, CatBooksLocators.H2_HUMANITIES)))
         GN.click()
         print("Clicked H2_HUMANITIES Category")
-    
+
+
+    def tearDown(self):
+        if self.driver:
+            self.driver.quit()
+
     def test_q_fiction(self):
         books_instance = Fiction(self.driver)
         books_instance.CatTesting()
@@ -169,51 +181,52 @@ class HumanitiesMain(unittest.TestCase):
 '''
 class HeadersMain(unittest.TestCase):
 
-    def setUp(self):
+        def setUp(self):
 
-        self.driver = webdriver.Chrome()
-        self.driver.maximize_window()
-        self.driver.get("https://www.fullybookedonline.com")
-        self.driver.implicitly_wait(10)
+            self.driver = webdriver.Chrome()
+            self.driver.maximize_window()
+            self.driver.get("https://www.fullybookedonline.com")
+            self.driver.implicitly_wait(10)  
 
-    def tearDown(self):
-        if self.driver:
-            self.driver.quit()
+        def tearDown(self):
+            if self.driver:
+                self.driver.quit()
 
-    # def test_x_bestsellers(self):
-    #     books_instance = Bestsellers(self.driver)
-    #     books_instance.CatTesting()
-    
-    def test_y_collections(self):
-        books_instance = Collections(self.driver)
-        books_instance.CatTesting()
-    
-    # def test_z_new(self):
-    #     books_instance = New(self.driver)
-    #     books_instance.CatTesting()
-    
-    # def test_aa_preorders(self):
-    #     books_instance = PreOrders(self.driver)
-    #     books_instance.CatTesting()
-    
-    # def test_ab_sale(self):
-    #     books_instance = Sale(self.driver)
-    #     books_instance.CatTesting()
+        # def test_a_bestsellers(self):
+        #     books_instance = Bestsellers(self.driver)
+        #     books_instance.CatTesting()
+        
+        # def test_b_collections(self):
+        #     books_instance = Collections(self.driver)
+        #     books_instance.CatTesting()
+            
+        
+        def test_c_new(self):
+            books_instance = New(self.driver)
+            books_instance.CatTesting()
+        
+        # def test_d_preorders(self):
+        #     books_instance = PreOrders(self.driver)
+        #     books_instance.CatTesting()
+        
+        # def test_e_sale(self):
+        #     books_instance = Sale(self.driver)
+        #     books_instance.CatTesting()
 
 
 # class LifestyleMain(unittest.TestCase):
 
-    # def setUp(self):
+#     def setUp(self):
 
-    #     self.driver = webdriver.Chrome()
-    #     self.driver.maximize_window()
-    #     self.driver.get("https://www.fullybookedonline.com")
-    #     self.driver.implicitly_wait(10)
+#         self.driver = webdriver.Chrome()
+#         self.driver.maximize_window()
+#         self.driver.get("https://www.fullybookedonline.com")
+#         self.driver.implicitly_wait(10)
 
-    #     Books = WebDriverWait(self.driver, 10).until(
-    #         EC.presence_of_element_located((By.XPATH, CatBooksLocators.H1_BOOKS)))
-    #     actions = ActionChains(self.driver)
-    #     actions.move_to_element(Books).perform()
+#         Books = WebDriverWait(self.driver, 10).until(
+#             EC.presence_of_element_located((By.XPATH, CatBooksLocators.H1_BOOKS)))
+#         actions = ActionChains(self.driver)
+#         actions.move_to_element(Books).perform()
 
         
 
