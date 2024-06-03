@@ -7,39 +7,18 @@ class Collections():
 
     def CatTesting(self):
             
-            try:
+            # try:
 
                 Collections = WebDriverWait(self.driver, 10).until(
                     EC.presence_of_element_located((By.XPATH, HeadersLocator.COLLECTIONS)))
                 self.driver.execute_script("arguments[0].click();", Collections)
-                # ActionChains(self.driver).move_to_element(Collections).perform()
                 print("-------------Collections Category---------------")
 
                 sort_newest = SortBy(self.driver)
                 sort_newest.sort_newest()
                 
                 page_clicker = PageClicker(self.driver)
-                error_fetch = PageClicker(self.driver)
-
-                while True:
-                    page_clicker.click_next_page()
-                #     error_fetch.errorFetch()
-
-            #     while True:
-                    
-            #             if not page_clicker.click_next_page():
-            #                 error_fetch.errorFetch()
-            # except Exception as e:
-            #     error_fetch.errorFetch()
-            #     print(f"An error occurred: {e}")
-
-            except TimeoutException:
-                print("TimeoutException: Error Fetching Occured or Last page reached")
-                self.driver.quit()
-            
-            except NoSuchElementException:
-                print("Last page reached")
-                self.driver.quit()
+                page_clicker.click_next_page()
 
 if __name__ == "__main__":
     books_instance = Collections()
