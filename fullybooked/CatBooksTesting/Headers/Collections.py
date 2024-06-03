@@ -7,8 +7,6 @@ class Collections():
 
     def CatTesting(self):
             
-            # try:
-
                 Collections = WebDriverWait(self.driver, 10).until(
                     EC.presence_of_element_located((By.XPATH, HeadersLocator.COLLECTIONS)))
                 self.driver.execute_script("arguments[0].click();", Collections)

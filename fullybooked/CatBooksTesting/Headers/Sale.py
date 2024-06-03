@@ -8,8 +8,6 @@ class Sale():
 
     def CatTesting(self):
             
-            # try:
-
                 Sale = WebDriverWait(self.driver, 10).until(
                     EC.presence_of_element_located((By.XPATH, HeadersLocator.SALE)))
                 Sale.click()

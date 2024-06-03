@@ -7,7 +7,6 @@ class Bestsellers():
 
     def CatTesting(self):
         
-            # try:
                 Bestsellers = WebDriverWait(self.driver, 10).until(
                     EC.presence_of_element_located((By.XPATH, HeadersLocator.BESTSELLERS)))
                 Bestsellers.click()

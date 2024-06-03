@@ -6,8 +6,6 @@ class PreOrders():
         self.driver = driver
 
     def CatTesting(self):
-            
-            # try:
 
                 PreOrders = WebDriverWait(self.driver, 10).until(
                     EC.presence_of_element_located((By.XPATH, HeadersLocator.PREORDERS)))
