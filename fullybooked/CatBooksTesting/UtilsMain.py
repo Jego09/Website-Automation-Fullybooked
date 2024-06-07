@@ -30,4 +30,19 @@ from Headers.Collections import *
 from Headers.New import *
 from Headers.PreOrders import *
 from Headers.Sale import *
+from Lifestyle.LS_BodyMind import *
+from Lifestyle.LS_Games import *
+from Lifestyle.LS_Cooking import *
+from Lifestyle.LS_Family import *
+from Lifestyle.LS_Health import *
+from Lifestyle.LS_Humor import *
+from Lifestyle.LS_Sports import *
+from Lifestyle.LS_Travel import *
+from Professional.P_Science import *
+from Professional.P_SelfHelp import *
+from Professional.P_SocSci import *
+from Professional.P_Psychology import *
+from Professional.P_LanguageArts import *
+from Professional.P_ForeignLanguage import *
+from Professional.P_BusinessEcon import *
 
