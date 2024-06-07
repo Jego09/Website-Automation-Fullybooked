@@ -1,6 +1,6 @@
 from utils import *
 
-load_dotenv('fullybooked\main\.env')
+load_dotenv()
 
 FB_USERNAME: str = os.getenv('USERNAME_INPUT')
 FB_PASSWORD: str = os.getenv('PASSWORD_INPUT')
@@ -22,24 +22,24 @@ class FullyBookTest(unittest.TestCase):
         self.driver.get("https://www.fullybookedonline.com")
         self.driver.implicitly_wait(10)
 
-        # login_register_button = self.driver.find_element(By.ID, Login.LOGIN_LOGO) 
-        # login_register_button.click()
-        # # print("Clicked Login/Register Button")
+        login_register_button = self.driver.find_element(By.ID, Login.LOGIN_LOGO) 
+        login_register_button.click()
+        print("Clicked Login/Register Button")
 
-        # username = WebDriverWait(self.driver, 10).until(
-        #     EC.presence_of_element_located((By.ID, Login.USERNAME_TXTBOX)))
-        # username.send_keys(FB_USERNAME)
-        # # print("Entered Username")
+        username = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.ID, Login.USERNAME_TXTBOX)))
+        username.send_keys(FB_USERNAME)
+        print("Entered Username")
 
-        # password = WebDriverWait(self.driver, 10).until(
-        #     EC.presence_of_element_located((By.ID, Login.PASSWORD_TXTBOX)))
-        # password.send_keys(FB_PASSWORD)
-        # # print("Entered Password")
+        password = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.ID, Login.PASSWORD_TXTBOX)))
+        password.send_keys(FB_PASSWORD)
+        print("Entered Password")
 
-        # login_button = self.driver.find_element(By.XPATH, Login.LOGIN_BUTTON)
-        # # print("Clicked Login Button")
-        # login_button.click()
-        # time.sleep(2)
+        login_button = self.driver.find_element(By.XPATH, Login.LOGIN_BUTTON)
+        print("Clicked Login Button")
+        login_button.click()
+        time.sleep(2)
 
     def tearDown(self):
         if self.driver:

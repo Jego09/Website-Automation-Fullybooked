@@ -181,35 +181,34 @@ from UtilsMain import *
 
 class E_HeadersMain(unittest.TestCase):
 
-        def setUp(self):
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
+        self.driver.get("https://www.fullybookedonline.com")
+        self.driver.implicitly_wait(1)
 
-            self.driver = webdriver.Chrome()
-            self.driver.maximize_window()
-            self.driver.get("https://www.fullybookedonline.com")
-            self.driver.implicitly_wait(0.5)  
+    def tearDown(self):
+        self.driver.quit()
 
-        def tearDown(self):
-            self.driver.quit()
+    def test_a_bestsellers(self):
+        books_instance = Bestsellers(self.driver)
+        books_instance.CatTesting()
+    
+    def test_b_collections(self):
+        books_instance = Collections(self.driver)
+        books_instance.CatTesting()
 
-        def test_a_bestsellers(self):
-            books_instance = Bestsellers(self.driver)
-            books_instance.CatTesting()
-        
-        def test_b_collections(self):
-            books_instance = Collections(self.driver)
-            books_instance.CatTesting()
-
-        def test_c_new(self):
-            books_instance = New(self.driver)
-            books_instance.CatTesting()
-        
-        def test_d_preorders(self):
-            books_instance = PreOrders(self.driver)
-            books_instance.CatTesting()
-        
-        def test_e_sale(self):
-            books_instance = Sale(self.driver)
-            books_instance.CatTesting()
+    def test_c_new(self):
+        books_instance = New(self.driver)
+        books_instance.CatTesting()
+    
+    def test_d_preorders(self):
+        books_instance = PreOrders(self.driver)
+        books_instance.CatTesting()
+    
+    def test_e_sale(self):
+        books_instance = Sale(self.driver)
+        books_instance.CatTesting()
 
 # class F_LifestyleMain(unittest.TestCase):
 

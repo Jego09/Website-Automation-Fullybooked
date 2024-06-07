@@ -113,6 +113,8 @@ class PageClicker:
                     print(f"Clicked page {self.page_number}")
 
                     self.page_number += 1
-                            
+                    
             except TimeoutException:
                 print("TimeoutException: Either Last page reached or Browser does not load")
+    
+
